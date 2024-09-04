@@ -1,3 +1,6 @@
+/// <reference types="vitest" />
+/// <reference types="vite/client" />
+
 import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react";
 import { resolve } from "path";
@@ -12,6 +15,18 @@ export default defineConfig({
       "@components": resolve(__dirname, "src/components"),
       "@views": resolve(__dirname, "src/views"),
       "@": resolve(__dirname, "src"),
+    },
+  },
+  test: {
+    globals: true,
+    environment: "jsdom",
+    setupFiles: ["./src/setupTests.ts"],
+    coverage: {
+      enabled: true,
+      provider: "v8",
+      include: ["src/**/*.ts", "src/**/*.tsx"],
+      exclude: ["src/**/*.d.ts", "src/setupTests.ts"],
+      reporter: ["text", "json", "html"],
     },
   },
 });
