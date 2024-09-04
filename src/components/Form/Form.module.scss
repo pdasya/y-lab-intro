@@ -1,0 +1,20 @@
+.header {
+  -webkit-text-stroke: 1.5px black;
+  color: transparent;
+  letter-spacing: 2px;
+  font-size: 48px;
+
+  text-transform: lowercase;
+}
+
+.formWrapper {
+  width: 600px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+
+  background-color: #d6cbc9;
+  border-radius: 10px;
+}
