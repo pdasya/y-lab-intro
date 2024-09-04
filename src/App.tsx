@@ -1,7 +1,8 @@
 import "./App.css";
+import Main from "./views/Main";
 
 const App = () => {
-  return <div> Здесь будет приложение</div>;
+  return <Main />;
 };
 
 export default App;
