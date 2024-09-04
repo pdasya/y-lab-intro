@@ -4,11 +4,22 @@ import styles from "./Input.module.scss";
 interface InputProps {
   type: string;
   placeholderText: string;
+  id: string;
 }
 
-const Input: FC<InputProps> = ({ type, placeholderText }) => {
+const Input: FC<InputProps> = ({ type, placeholderText, id }) => {
   return (
-    <input type={type} className={styles.input} placeholder={placeholderText} />
+    <div className={styles.inputWrapper}>
+      <label htmlFor={id} className={styles.label}>
+        {id}
+      </label>
+      <input
+        type={type}
+        className={styles.input}
+        placeholder={placeholderText}
+        id={id}
+      />
+    </div>
   );
 };
 

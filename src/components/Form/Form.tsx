@@ -8,8 +8,8 @@ const Form: FC = () => {
     <>
       <form className={styles.formWrapper}>
         <h2 className={styles.header}>Sign In</h2>
-        <Input type="email" placeholderText="example@domen.com" />
-        <Input type="password" placeholderText="password" />
+        <Input type="email" placeholderText="Example@domen.com" id={"Email"} />
+        <Input type="password" placeholderText="Password" id={"Password"} />
         <Button buttonText="Submit" />
       </form>
     </>
