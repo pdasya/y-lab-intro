@@ -6,7 +6,7 @@ interface ButtonProps {
 }
 
 const Button: FC<ButtonProps> = ({ buttonText }) => {
-  return <button className={styles.searchButton}> {buttonText}</button>;
+  return <button className={styles.button}> {buttonText}</button>;
 };
 
 export default Button;
