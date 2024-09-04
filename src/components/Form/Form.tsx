@@ -3,11 +3,12 @@ import Input from "./Input/Input";
 import Button from "./Button/Button";
 import styles from "./Form.module.scss";
 import mockFetch, { MockResponse } from "../../utils/mockFetch";
+import Modal from "../Modal/Modal";
 
 const Form: FC = () => {
   const [email, setEmail] = useState<string>("");
   const [password, setPassword] = useState<string>("");
-  const [message, setMessage] = useState<string>("");
+  const [modalMessage, setModalMessage] = useState<string | null>(null);
 
   const handleSubmit = async (e: FormEvent) => {
     e.preventDefault();
@@ -15,10 +16,17 @@ const Form: FC = () => {
     const response: MockResponse = await mockFetch(email, password);
 
     if (response.success) {
-      setMessage("Login successful!");
+      setModalMessage("You are successfully logged in!");
     } else {
-      setMessage(response.message || "An error occurred");
+      setModalMessage(response.message || "An error occurred");
     }
+
+    setEmail("");
+    setPassword("");
+  };
+
+  const closeModal = () => {
+    setModalMessage(null);
   };
 
   return (
@@ -28,18 +36,20 @@ const Form: FC = () => {
         <Input
           type="email"
           placeholderText="Example@domen.com"
+          value={email}
           id={"Email"}
           onChange={(e) => setEmail(e.target.value)}
         />
         <Input
           type="password"
           placeholderText="Password"
+          value={password}
           id={"Password"}
           onChange={(e) => setPassword(e.target.value)}
         />
         <Button buttonText="Submit" />
       </form>
-      {message && <div className="message">{message}</div>}
+      {modalMessage && <Modal message={modalMessage} onClose={closeModal} />}
     </>
   );
 };

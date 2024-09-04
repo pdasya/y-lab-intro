@@ -9,9 +9,13 @@ const mockFetch = (email: string, password: string): Promise<MockResponse> => {
       if (email === "user@example.com" && password === "password123") {
         resolve({ success: true });
       } else {
-        resolve({ success: false, message: "Invalid email or password" });
+        resolve({
+          success: false,
+          message:
+            "Invalid email or password. Check the available credentials at project documentation on https://github.com/pdasya/y-lab-intro",
+        });
       }
-    }, 1000);
+    }, 3000);
   });
 };
 

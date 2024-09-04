@@ -5,9 +5,17 @@ interface InputProps {
   type: string;
   placeholderText: string;
   id: string;
+  value: string;
+  onChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
 }
 
-const Input: FC<InputProps> = ({ type, placeholderText, id }) => {
+const Input: FC<InputProps> = ({
+  type,
+  placeholderText,
+  id,
+  value,
+  onChange,
+}) => {
   return (
     <div className={styles.inputWrapper}>
       <label htmlFor={id} className={styles.label}>
@@ -17,7 +25,10 @@ const Input: FC<InputProps> = ({ type, placeholderText, id }) => {
         type={type}
         className={styles.input}
         placeholder={placeholderText}
+        value={value}
         id={id}
+        onChange={onChange}
+        required
       />
     </div>
   );
