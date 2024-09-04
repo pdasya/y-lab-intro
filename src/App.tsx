@@ -1,4 +1,4 @@
-import "./App.css";
+import "./App.scss";
 import Main from "./views/Main";
 
 const App = () => {
