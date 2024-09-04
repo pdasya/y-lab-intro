@@ -18,7 +18,7 @@
 
 3. **Deploy**
 
-Deploy link will be here
+[Deploy is here](https://pdasya.github.io/y-lab-intro/)
 
 4. **Available credentials**
 
