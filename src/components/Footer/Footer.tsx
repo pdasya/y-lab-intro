@@ -6,7 +6,7 @@ const Footer: FC = () => {
     <div className={styles.footerWrapper}>
       <a href="https://github.com/pdasya" className={styles.footerGithub}>
         <img
-          src="/github.png"
+          src="../../../public/github.png"
           alt="github image"
           className={styles.footerGithubImage}
         ></img>
@@ -15,7 +15,7 @@ const Footer: FC = () => {
       <p className={styles.footerYear}>2024</p>
       <a href="https://university.ylab.io/" className={styles.footerYlab}>
         <img
-          src="/ylab-university.png"
+          src="../../../public/ylab-university.png"
           alt="ylab image"
           className={styles.footerYlabImage}
         ></img>
