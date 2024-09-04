@@ -1,8 +1,8 @@
 import { FC } from "react";
-import Form from "../components/Form/Form";
 import styles from "./Main.module.scss";
-import Footer from "../components/Footer/Footer";
 import "../App.scss";
+import Footer from "@components/Footer/Footer";
+import Form from "@components/Form/Form";
 
 const Main: FC = () => {
   return (

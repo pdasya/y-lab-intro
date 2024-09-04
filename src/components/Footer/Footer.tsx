@@ -1,7 +1,7 @@
 import { FC } from "react";
 import styles from "./Footer.module.scss";
-import githubImage from "../../../public/github.png";
-import ylabImage from "../../../public/ylab-university.png";
+import githubImage from "/github.png";
+import ylabImage from "/ylab-university.png";
 
 const Footer: FC = () => {
   return (

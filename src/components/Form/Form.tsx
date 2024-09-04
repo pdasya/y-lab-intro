@@ -2,9 +2,9 @@ import { FC, FormEvent, useState } from "react";
 import Input from "./Input/Input";
 import Button from "./Button/Button";
 import styles from "./Form.module.scss";
-import mockFetch, { MockResponse } from "../../utils/mockFetch";
 import Modal from "../Modal/Modal";
 import Loader from "../Loader/Loader";
+import mockFetch, { MockResponse } from "@utils/mockFetch";
 
 const Form: FC = () => {
   const [email, setEmail] = useState<string>("");

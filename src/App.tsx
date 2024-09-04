@@ -1,5 +1,5 @@
+import Main from "@views/Main";
 import "./App.scss";
-import Main from "./views/Main";
 
 const App = () => {
   return <Main />;
