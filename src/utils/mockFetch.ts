@@ -1,3 +1,5 @@
+import { availableEmails } from "./availableEmail";
+
 export interface MockResponse {
   success: boolean;
   message?: string;
@@ -6,7 +8,11 @@ export interface MockResponse {
 const mockFetch = (email: string, password: string): Promise<MockResponse> => {
   return new Promise((resolve) => {
     setTimeout(() => {
-      if (email === "user@example.com" && password === "password123") {
+      const user = availableEmails.find(
+        (user) => user.email === email && user.password === password,
+      );
+
+      if (user) {
         resolve({ success: true });
       } else {
         resolve({
