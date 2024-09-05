@@ -1,0 +1,37 @@
+.errorBoundary {
+  &Wrapper {
+    max-width: 1920px;
+    width: 100vw;
+    height: 100vh;
+    background-image: url("/background-error-boundary.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+  }
+
+  &Header {
+    padding: 10px 30px;
+    font-size: 40px;
+    font-family: "StarJedi";
+  }
+
+  &Button {
+    margin-top: 10px;
+
+    font-size: 16px;
+    letter-spacing: 2px;
+
+    color: black;
+    font-weight: 700;
+    background-color: white;
+    width: auto;
+    border-radius: 25px;
+    padding: 7px 9px;
+
+    font-family: "StarJedi";
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+}
