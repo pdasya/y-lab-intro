@@ -25,7 +25,12 @@ export default defineConfig({
       enabled: true,
       provider: "v8",
       include: ["src/**/*.ts", "src/**/*.tsx"],
-      exclude: ["src/**/*.d.ts", "src/setupTests.ts"],
+      exclude: [
+        "src/**/*.d.ts",
+        "src/setupTests.ts",
+        "src/**/*.test.ts",
+        "src/**/*.test.tsx",
+      ],
       reporter: ["text", "json", "html"],
     },
   },

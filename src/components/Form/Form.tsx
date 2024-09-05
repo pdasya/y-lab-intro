@@ -26,7 +26,7 @@ const Form: FC = () => {
         setModalMessage(response.message || "An error occurred");
       }
     } catch (error) {
-      setModalMessage("An unexpected error occurred");
+      setModalMessage(`An unexpected error ${error} occurred`);
     } finally {
       setIsLoading(false);
       setEmail("");
