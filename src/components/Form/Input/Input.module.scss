@@ -17,3 +17,10 @@
   color: black;
   padding-left: 15px;
 }
+
+
+@media screen and (max-width: 670px) {
+    .input {
+      width: 60vw;
+    }
+}
